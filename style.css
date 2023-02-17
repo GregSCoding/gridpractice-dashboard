@@ -58,11 +58,29 @@ body{
   grid-area: 2/2/3/3;
   background-color: aqua;
 }
-.lefthalf{
+.lefthalf, .righthalf{
   display: flex;
   gap:20px;
-  align-items: baseline;
+  align-items: center;
 }
 .firstcell{
   display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
+.headericon{
+  color: black; 
+  font-size: 18px;
+}
+.round-icon{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-image: url(img/cat.jpg);
+  background-size: cover;
+  align-self: center;
+}
+.headername{
+  font-family: sans-serif;
+  font-weight: 600;
 }
