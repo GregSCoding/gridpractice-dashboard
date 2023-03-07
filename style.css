@@ -27,7 +27,7 @@ body{
   display: grid;
   height: 100vh;
   grid-template-columns: 260px 1fr;
-  grid-template-rows: 200px 1fr;
+  grid-template-rows: 180px 1fr;
   background-color: white;
   
 }
@@ -54,10 +54,7 @@ body{
   border: none;
   border-radius: 20px;
 }
-.maincontent{
-  grid-area: 2/2/3/3;
-  background-color: rgb(95, 194, 194);
-}
+
 .lefthalf, .righthalf{
   display: flex;
   gap:10px;
@@ -109,10 +106,66 @@ button.options{
   border: none;  
     font-family: sans-serif;
   color: white;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
 }
-
 .secondcell > .righthalf{
   gap: 30px;
+}
+.section-name{
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+.maincontent{
+  grid-area: 2/2/3/3;
+  background-color:  rgb(201, 211, 238);
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 50px 1fr 50px 1fr;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  padding-bottom: 50px;
+}
+.project-card-section{
+  grid-area: 2/1/5/2;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 410px);
+  gap: 30px;
+  align-self: flex-start;
+}
+.card{
+  width: 350px;
+  height: 170px;
+  background-color: white;
+  border-left: aqua 12px solid;
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.card > .title{
+  font-size: 18px;
+  font-weight: 600;
+  font-family: sans-serif;
+  margin-bottom: 5px;
+}
+.card > .content{
+  font-family: sans-serif;
+  flex-grow: 1;
+  font-size: 15px;
+  color: rgb(201, 211, 238);
+  padding-right: 30px;
+  margin-bottom: 40px;
+}
+.icons > .icon{
+  font-size: 24px;
+  color: rgb(140, 148, 172);
+}
+.icons{
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 15px;
+  gap: 20px;
 }
