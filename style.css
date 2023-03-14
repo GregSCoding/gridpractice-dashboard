@@ -116,28 +116,33 @@ button.options{
   font-family: sans-serif;
   font-size: 20px;
   font-weight: 600;
+  justify-self: flex-start;
+  align-self: flex-end;
 }
 .maincontent{
+  --main-content-color:rgb(165, 180, 221);
   grid-area: 2/2/3/3;
   background-color:  rgb(201, 211, 238);
   display: grid;
   grid-template-columns: 3fr 1fr;
-  grid-template-rows: 50px 1fr 50px 1fr;
-  align-items: center;
-  gap: 10px;
+  grid-template-rows: 30px 1fr 30px 1fr;
+  gap: 20px;
   padding: 10px;
-  padding-bottom: 50px;
+  padding-right: 75px;
+  padding-bottom: 10px;
 }
 .project-card-section{
   grid-area: 2/1/5/2;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 410px);
-  gap: 30px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 20px;
   align-self: flex-start;
 }
 .card{
-  width: 350px;
-  height: 170px;
+  width: 100%;
+  height: 267px;
+  box-sizing: border-box;
   background-color: white;
   border-left: aqua 12px solid;
   border-radius: 5px;
@@ -152,10 +157,10 @@ button.options{
   margin-bottom: 5px;
 }
 .card > .content{
-  font-family: sans-serif;
+    font-family: sans-serif;
   flex-grow: 1;
   font-size: 15px;
-  color: rgb(201, 211, 238);
+  color: var(--main-content-color);
   padding-right: 30px;
   margin-bottom: 40px;
 }
@@ -168,4 +173,67 @@ button.options{
   justify-content: flex-end;
   padding-right: 15px;
   gap: 20px;
+}
+.annoucements-card{
+  background-color: white;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  gap: 15px;
+}
+.annoucement{
+  border-bottom: solid 1px var(--main-content-color);
+}
+.annoucement > .title{
+  font-size: 16px;
+  font-weight: 600;
+  font-family: sans-serif;
+  margin-bottom: 6px;
+}
+.annoucement > .content{
+  font-family: sans-serif;
+  flex-grow: 1;
+  font-size: 14px;
+  color: var(--main-content-color);
+  margin-bottom: 10px;
+}
+.trending-card{
+  background-color: white;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 5px;
+}
+.trending-item{
+  display: flex;
+}
+.trending-item > .round-icon{
+  width: 80px;
+  height: 80px;
+}
+.nametag{
+  height: 70px;
+  padding-top: 20px;
+  padding-left: 10px;
+}
+.nametag > .title{
+  font-size: 16px;
+  font-weight: 550;
+  font-family: sans-serif;
+  margin-bottom: 5px;
+}
+.nametag > .project-name{
+  font-family: sans-serif;
+  flex-grow: 1;
+  font-size: 14px;
+  color: var(--main-content-color);
+  margin-bottom: 10px;
 }
